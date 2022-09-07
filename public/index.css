@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Roboto';
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+canvas{
+    position:fixed;
+    top:0;
+    left:0;
+}
+
+#info{
+    position:fixed;
+    z-index:5;
+    color:white;
+    right:2rem;
+    bottom:2rem;
+}
+
+#chatBox, #nameBox{
+    background-color: lightblue;
+    width:40vw;
+    height:40vh;
+    position:fixed;
+    top:20vh;
+    left:30vw;
+    z-index:5;
+    display:grid;
+    grid-template-rows: 6fr 1fr;
+    transition:all .5s ease-in-out;
+}
+
+#chatBox.hide, #nameBox.hide{
+    left:-100vw;
+}
+
+#chat{
+    background:white;
+    padding:1rem;
+    overflow:scroll;
+}
